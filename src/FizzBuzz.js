@@ -4,14 +4,15 @@ var FIZZBUZZ = (function () {
     "use strict";
 
     var tellMe = function (number) {
-        var result = number;
+        var FIZZ = 3,
+            BUZZ = 5;
 
-        if (number % 3 === 0) { result = "FIZZ"; }
-        if (number % 5 === 0) { result = "BUZZ"; }
-        if (number % 5 === 0 && number % 3 === 0) { result = "FIZZBUZZ"; }
-        if (number === 0) { result = 0; }
+        if (number === 0) { return 0; }
+        if (number % FIZZ === 0 && number % BUZZ === 0) { return "FIZZBUZZ"; }
+        if (number % FIZZ === 0) { return "FIZZ"; }
+        if (number % BUZZ === 0) { return "BUZZ"; }
 
-        return result;
+        return number;
     },
 
         solutionsOfThe = function (firstNumbers) {
